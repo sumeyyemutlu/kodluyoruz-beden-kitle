@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Vücut Kitle Endeksi Hesaplama</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="index.css" type="text/css" rel="stylesheet"/>
+<script language="JavaScript" type="text/javascript"> 
+
+    function hesapla() {
+        var kilo = document.KitleForm.kilo.value
+        var boy = document.KitleForm.boy.value
+        if(kilo > 0 && boy > 0){  
+            var sonuc = kilo/(boy/100*boy/100)
+            document.KitleForm.endeks.value = sonuc
+            if(sonuc < 18.5){
+                document.KitleForm.islemsonucu.value = "Zayıfsınız"
+            }
+            if(sonuc > 18.5 && sonuc < 24.9){
+                document.KitleForm.islemsonucu.value = "Normal Kilolusunuz."
+            }
+            if(sonuc >25 && sonuc < 29.9){
+                document.KitleForm.islemsonucu.value = "Fazla Kilolusunuz."
+            }
+            if(sonuc >30 && sonuc < 39.9){
+                document.KitleForm.islemsonucu.value = "Obezsiniz."
+            }
+            if(sonuc >40){
+                document.KitleForm.islemsonucu.value = "İleri derecede obezsiniz."
+            }
+        }
+        else{
+        alert("Boy veya Kilo gerçek dışıdır, lütfen düzeltiniz!")
+        }
+    }
+</script>
+</head>
+
+<body>
+    <div class="container">
+        <form name="KitleForm">
+            <div class="height">
+                <div class="height_title"> <span>Boy(cm):</span></div>
+                 <input type="text" name="boy" size="10"><br />
+            </div>
+            <div class="weight">
+                <div class="height_title"> <span> Kilo(kg):</span></div>
+                <input type="text" name="kilo" size="10"><br />
+            </div>
+            <div class="control_button">
+                <input type="button" value="Kontrol Et" onClick="hesapla()"><br />
+            </div>
+        <div class="endeks">
+            Vücut Kitle Endeksiniz: <input type="text" name="endeks" size="10"><br />
+        </div>
+        
+        <div class="result_desc"></div>
+        Sonuca Göre: <input type="text" name="islemsonucu" size="25"><br />
+        <div class="clear_button"> <input type="reset" value="Temizle" /></div>
+       
+    </form>
+    </div>
+    
+</body>
+</html>
