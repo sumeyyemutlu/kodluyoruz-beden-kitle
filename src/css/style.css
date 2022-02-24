@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  outline: none;
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*:focus {
+  outline: none;
+  border: none;
+}
+
+* input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+* input[type='number']::-webkit-outer-spin-button,
+* input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+body {
+  background-color: #111927;
+  color: white;
+  height: 100vh;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .title {
+  font-size: 44px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #9fef00;
+  width: 100%;
+  text-align: center;
+}
+
+.container .form {
+  width: 100%;
+}
+
+.container .form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #a4b1cd;
+  margin-bottom: 10px;
+}
+
+.container .form label input[type='number'] {
+  background-color: #1a2331;
+  color: white;
+  width: 150px;
+  height: 30px;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid #a4b1cd;
+}
+
+.container .form label input[type='number']:focus {
+  border: 1px solid #9fef00;
+}
+
+.container .form .button-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.container .form .button-action .submit-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 30px;
+  background-color: #1a2331;
+  color: #9fef00;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 50px;
+  margin-top: 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+.container .form .button-action .submit-btn:hover {
+  background-color: #a4b1cd;
+  color: #1a2331;
+}
+
+.container .form .button-action .reset-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 30px;
+  background-color: #1a2331;
+  color: #c03238;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 50px;
+  margin-top: 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+.container .form .button-action .reset-btn:hover {
+  background-color: #c03238;
+  color: white;
+}
+
+.container .form .bilgiler {
+  margin-top: 22px;
+  background-color: #1a2331;
+  padding: 10px;
+  border: 1px solid #9fef00;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.container .form .bilgiler span {
+  margin-left: 10px;
+  color: #019eff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Alert Start */
+.alert {
+  padding: 12px;
+  margin: 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+@media (max-width: 487px) {
+  .alert {
+    font-size: 14px;
+  }
+}
+
+.alert-warning {
+  background-color: rgba(255, 171, 0, 0.2);
+  color: #c28200;
+  border: 1px solid #eb9d00;
+}
+
+.alert-primary {
+  background-color: rgba(0, 144, 231, 0.2);
+  color: #009dff;
+  border: 1px solid #0084d5;
+}
+
+.alert-danger {
+  background-color: rgba(252, 66, 74, 0.2);
+  color: #c03238;
+  border: 1px solid #e83d44;
+}
+
+.alert-info {
+  background-color: rgba(143, 95, 232, 0.2);
+  color: #6d48b0;
+  border: 1px solid #8457d5;
+}
+
+.alert-success {
+  background-color: rgba(0, 210, 91, 0.2);
+  color: #00a045;
+  border: 1px solid #00c154;
+}
+
+.alert-light {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #c2c2c2;
+  border: 1px solid #ebebeb;
+}
+
+/* Alert End */
+/*# sourceMappingURL=style.css.map */
